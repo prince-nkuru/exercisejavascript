@@ -23,3 +23,6 @@ function sumOfMinimums(arr) {
 function sumOfMinimums(arr) {
   return arr.reduce((p, c) => p + Math.min(...c), 0);
 }
+//////////////////////////////////////////////
+
+const sumOfMinimums = ( array ) => array.map( el => Math.min(...el) ).reduce( (a, b)=> a + b, 0)
