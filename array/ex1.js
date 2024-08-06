@@ -5,3 +5,7 @@ Please note, there may be duplicates in the arrays, so checking if a numerical v
 find_missing([1, 2, 2, 3], [1, 2, 3]) => 2
 find_missing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) => 8
 The first array will always have at least one element.*/
+
+const sum = arr => arr.reduce((a, b) => a + b, 0);
+
+const findMissing = (arr1, arr2) => sum(arr1) - sum(arr2);
