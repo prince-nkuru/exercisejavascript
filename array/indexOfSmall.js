@@ -8,3 +8,5 @@ The given array will, therefore, never be empty.
 Example
 leastLarger( [4, 1, 3, 5, 6], 0 )  =>  3
 leastLarger( [4, 1, 3, 5, 6], 4 )  => -1*/
+
+const leastLarger = (a, i) => a.indexOf(Math.min(...a.filter(n => n > a[i])))
