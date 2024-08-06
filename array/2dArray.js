@@ -9,3 +9,11 @@ For Example:
 So the function should return 26 because the sum of the minimums is 1 + 5 + 20 = 26.
 
 Note: You will always be given a non-empty list containing positive values.*/
+function sumOfMinimums(arr) {
+  let sum = 0;
+  for (let i =0; i < arr.length; i++){
+    let tot = arr[i].sort((a, b) => a - b)[0];
+    sum += tot
+  }
+  return sum;
+}
