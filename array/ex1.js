@@ -9,3 +9,16 @@ The first array will always have at least one element.*/
 const sum = arr => arr.reduce((a, b) => a + b, 0);
 
 const findMissing = (arr1, arr2) => sum(arr1) - sum(arr2);
+
+///////////////////////////////////////////
+
+function findMissing(arr1, arr2) {
+  arr1.sort();
+  arr2.sort();
+  
+  for (var i = 0; i < arr1.length; i++) {
+    if(arr1[i] != arr2[i]) {
+      return arr1[i];
+    }
+  }
+}
