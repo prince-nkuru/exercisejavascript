@@ -19,3 +19,17 @@ function diff(a, b){
   const sortB=  b.filter(sum => !a.includes(sum));
   return [...new Set(sortA.concat(sortB).sort())];
 }
+
+///////////////////////////////////////////
+
+function diff(a, b){
+  var arr=[];
+  for (var i=0; i<a.length; ++i)
+    if (b.indexOf(a[i])==-1 && arr.indexOf(a[i])==-1)
+      arr.push(a[i]);
+  for (var i=0; i<b.length; ++i)
+    if (a.indexOf(b[i])==-1 && arr.indexOf(b[i])==-1)
+      arr.push(b[i]);
+  arr.sort();
+  return arr;
+}
