@@ -12,3 +12,10 @@ difference = [a, e, g, j, k]*/
 const diff = (a, b) => {
   return [...new Set(a.concat(b).filter(x => a.includes(x) ^ b.includes(x)))].sort()
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+function diff(a, b){
+  const sortA =  a.filter(sum => !b.includes(sum));
+  const sortB=  b.filter(sum => !a.includes(sum));
+  return [...new Set(sortA.concat(sortB).sort())];
+}
