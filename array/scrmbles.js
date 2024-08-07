@@ -17,3 +17,9 @@ function scramble(str, arr) {
     s[arr[i]]=str[i];
   return s.join('');
 };
+
+/////////////////////////////////////////////////////
+
+function scramble(s, a) {
+  return a.map((_,i)=>s[a.indexOf(i)]).join``
+};
