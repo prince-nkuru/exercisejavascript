@@ -10,3 +10,10 @@ The string that you will be returning back will have: 'a' at index 0, 'b' at ind
 In other words, put the first character in the string at the index described by the first element of the array
 
 You can assume that you will be given a string and array of equal length and both containing valid characters (A-Z, a-z, or 0-9).*/
+
+function scramble(str, arr) {
+  var s=str.split('');
+  for (var i=0; i<arr.length; ++i)
+    s[arr[i]]=str[i];
+  return s.join('');
+};
