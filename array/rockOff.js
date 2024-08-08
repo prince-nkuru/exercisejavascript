@@ -23,3 +23,14 @@ function solve(a, b) {
   else if (x < y) return `${x}, ${y}: Bob made "Jeff" proud!`;
   else return `${x}, ${y}: that looks like a "draw"! Rock on!`;
 }
+
+////////////////////////////////////////////////////////////////////////
+
+function solve(a, b) {
+  let pl1 = 0;
+  let pl2 = 0;
+  
+  a.forEach((cur, i) => cur > b[i] ? pl1++ : cur < b[i] ? pl2++ : 0);
+  
+  return `${pl1}, ${pl2}: ${pl1 > pl2 ? 'Alice made "Kurt" proud!' : pl1 < pl2 ? 'Bob made "Jeff" proud!' : 'that looks like a "draw"! Rock on!'}`;
+}
