@@ -1,0 +1,1 @@
+const matrix = array => array.map((i, x) => i.map((j, y) => x == y ? +!(j < 0) : j))
