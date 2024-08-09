@@ -32,3 +32,9 @@ function oddOnesOut(nums) {
 
   return nums.filter(el => results[el] % 2 === 0)
 }
+
+////////////////////////////////////////////////////
+
+function oddOnesOut(nums) {
+  return nums.filter(n => nums.filter(x => x === n).length % 2 === 0);
+}
