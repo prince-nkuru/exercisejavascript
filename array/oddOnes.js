@@ -38,3 +38,10 @@ function oddOnesOut(nums) {
 function oddOnesOut(nums) {
   return nums.filter(n => nums.filter(x => x === n).length % 2 === 0);
 }
+
+/////////////////////////////////////////////////////////
+
+function oddOnesOut(a) {
+  let d = a.reduce((x, y) => (x[y] = (x[y] || 0) + 1, x), {});
+  return a.filter(x => d[x] % 2 === 0);
+}
