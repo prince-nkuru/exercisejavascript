@@ -18,3 +18,17 @@ oddOnesOut([26, 23, 24, 17, 23, 24, 23, 26]) = [26, 24, 24, 26]
 oddOnesOut([1, 2, 3]) = []
 oddOnesOut([1]) = []
 Are you up to the challenge?*/
+
+function oddOnesOut(nums) {
+
+  const results = {};
+  nums.forEach(num => {
+    if (results[num]) {
+      results[num]++
+    } else {
+      results[num] = 1
+    }
+  });
+
+  return nums.filter(el => results[el] % 2 === 0)
+}
