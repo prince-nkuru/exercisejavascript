@@ -46,3 +46,11 @@ function maxProduct(numbers, size){
 }
 ///////////////////////////////////////////////////
 const maxProduct = (n, s) => n.sort((a, b) => a - b).slice(-s).reduce((a, b) => a * b)
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+function maxProduct(numbers, size){
+  return numbers.sort((a, b) => b - a)
+                .slice(0, size)
+                .reduce((acc, current) => acc * current, 1);
+}
