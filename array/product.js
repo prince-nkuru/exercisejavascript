@@ -27,3 +27,6 @@ Since the size (k) equal 2 , then the subsequence of size 2 whose gives product 
 maxProduct ({10, 3, -1, -27} , 3)  return (-30)
 Explanation:
 Since the size (k) equal 3 , then the subsequence of size 3 whose gives product of maxima is 10 * 3 * -1 = -30*/
+function maxProduct(numbers, size){
+  return numbers.sort((a,b) => b-a).slice(0,size).reduce((acc,n) => acc*n);
+}
