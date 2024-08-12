@@ -37,3 +37,6 @@ The Third element 360 is the product of all array's elements except the third el
 The Fourth element 300 is the product of all array's elements except the fourth element 6
 
 Finally ,The Fifth element 900 is the product of all array's elements except the fifth element 2*/
+function productArray(numbers){
+  return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
+}
