@@ -40,3 +40,16 @@ Finally ,The Fifth element 900 is the product of all array's elements except the
 function productArray(numbers){
   return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
 }
+
+////////////////////////////////////////////////////////////////
+
+function productArray(numbers){
+  let newarr = [];
+  let mult = numbers.reduce((a, b) => a * b);
+  
+  for (let i = 0; i < numbers.length; i++) {
+    newarr.push(mult/numbers[i]);
+  }
+  
+  return newarr;
+}
