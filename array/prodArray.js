@@ -53,3 +53,13 @@ function productArray(numbers){
   
   return newarr;
 }
+//////////////////////////////////////////////////////
+
+function productArray(nums, arr = []){
+  for (let i=0; i < nums.length; i++){
+    let temp = [...nums];
+    temp[i] = 1;
+    arr.push(temp.reduce((a, b)=> a * b, 1))
+  }
+  return arr
+}
