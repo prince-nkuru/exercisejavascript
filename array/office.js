@@ -39,3 +39,23 @@ function outed(meet, boss){
 function outed(c, b) {
   return Object.keys(c).reduce((s, e) => s + c[e] * (e === b ? 2 : 1), 0) / Object.keys(c).length > 5 ? "Nice Work Champ!" : "Get Out Now!";
 }
+
+///////////////////////////////////////////////////////////////////
+
+function outed(meet, boss){
+
+  let totalHappyness = 0
+  
+  for (item in meet){
+    if (item === boss) {
+      totalHappyness += (meet[item] *2) 
+    } else { totalHappyness += meet[item]}
+  }
+  let averageHappyness = totalHappyness / Object.keys(meet).length 
+  
+  
+  if (averageHappyness <= 5) {
+    return "Get Out Now!"
+  } else {return "Nice Work Champ!"}
+   
+  }
