@@ -33,3 +33,9 @@ function outed(meet, boss){
     }
   return sum/count<=5?'Get Out Now!':'Nice Work Champ!';
 }
+
+/////////////////////////////////////////////////////////////////
+
+function outed(c, b) {
+  return Object.keys(c).reduce((s, e) => s + c[e] * (e === b ? 2 : 1), 0) / Object.keys(c).length > 5 ? "Nice Work Champ!" : "Get Out Now!";
+}
