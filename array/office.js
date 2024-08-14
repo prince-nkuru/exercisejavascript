@@ -8,3 +8,9 @@ Given an object (meet) containing team member names as keys, and their happiness
 Happiness rating will be total score / number of people in the room.
 
 Note that your boss is in the room (boss), their score is worth double it's face value (but they are still just one person!).*/
+
+function outed(meet, boss) {
+  let names = Object.keys(meet)
+  let score = names.reduce((s,v) => s + meet[v], 0) + meet[boss]
+  return score / names.length > 5 ? 'Nice Work Champ!' : 'Get Out Now!'
+}
