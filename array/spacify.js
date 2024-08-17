@@ -9,3 +9,13 @@ function spacify(str) {
 /////////////////////////////////////////
 
 const spacify = str => [...str].join(' ');
+
+//////////////////////////////////////////////////
+
+const spacify = str => {
+  let result = ''
+  for (let i = 0; i < str.length; i++) {
+    result = result + str[i] + (i === (str.length - 1) ? '' : ' ')
+  }
+  return result
+}
