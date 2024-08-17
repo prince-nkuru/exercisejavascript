@@ -19,3 +19,6 @@ const spacify = str => {
   }
   return result
 }
+
+/////////////////////////////////////////////////////////
+const spacify = $ => $.replace(/./g, e => e + ' ').trim()
