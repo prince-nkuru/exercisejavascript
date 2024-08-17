@@ -16,3 +16,9 @@ function removeRotten(bagOfFruits){
   if(!bagOfFruits || !bagOfFruits.length) {return [];} 
   else {return bagOfFruits.map(e => e.replace(/^rotten/g, '').toLowerCase())};
 }
+
+///////////////////////////////////////
+
+function removeRotten(a){
+  return (a||[]).map(x=>x.replace('rotten','').toLowerCase())
+}
