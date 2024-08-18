@@ -13,3 +13,9 @@ For example:
 
    [ -1, 2 ]  => [ 2, -1 ] 
    [ 1, 2, -3, 4, 5, 6, -7, 8 ]   =>  [ 5, 6, -7, 8, 1, 2, -3, 4 ]  */
+
+   const swapHeadAndTail = (arr, mid = arr.length / 2) => [
+    ...arr.slice(-mid),
+    ...arr.slice(mid, -mid), 
+    ...arr.slice(0, mid)
+  ];
