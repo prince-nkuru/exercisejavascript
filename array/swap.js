@@ -19,3 +19,25 @@ For example:
     ...arr.slice(mid, -mid), 
     ...arr.slice(0, mid)
   ];
+
+  //////////////////////////////////////////////////////////////
+
+  const swapHeadAndTails  = (array) => {
+    let l = array.length;
+    let r = Math.round(l / 2);
+    let f = Math.floor(l / 2);
+    let a = array.splice(0, f);
+    let b = array.splice(r - f);
+    return b.concat(array, a);
+}
+
+//////////////////////////////////////////////////////////
+
+const swapHeadAndTail3 = a => {
+  const m = a.length/2
+  return [].concat(
+    a.slice(m+.5|0),
+    m == (m|0) ? [] : a[m|0],
+    a.slice(0,m)
+  )
+}
