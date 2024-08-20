@@ -14,3 +14,12 @@ validateSequence([0,2,4,6,8]) === true
 validateSequence([1,3,5,7,9]) === true
 validateSequence([1,2,4,8,16,32,64]) === false
 validateSequence([0,1,1,2,3,5,8,13,21,34]) === false*/
+
+function validateSequence(x) {
+  var n = x[1] - x[0]
+  for (var i = 2; i < x.length; i++) {
+    if (x[i - 1] + n !== x[i]) return false
+  }
+  
+  return true
+}
