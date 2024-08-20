@@ -23,3 +23,11 @@ function validateSequence(x) {
   
   return true
 }
+
+///////////////////////////////////////////////////////////
+
+function validateSequence(x) {
+  return x.every(function(num,i){
+     return -num === (x[0]-x[1])*i - x[0]
+  })
+}
