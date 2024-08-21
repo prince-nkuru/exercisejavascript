@@ -6,3 +6,19 @@ Note that the number will always be non-negative (>= 0).*/
 function insertDash(num) {
   return num.toString().replace(/[13579](?=[13579])/g, "$&-");
 }
+
+/////////////////////////////////////////////////////
+
+function insertDash(num) {
+  //code me
+num = num.toString().split('')
+ 
+ for(let i = 0; i < num.length; i++){
+   if (num[i]%2 > 0 && num[i +1]%2 > 0){
+     num[i] = num[i] + '-'
+   }
+ }
+
+ return num.join('')
+ 
+}
