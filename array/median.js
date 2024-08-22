@@ -12,3 +12,9 @@ meanVsMedian=numbers=>{
   var mean = numbers.reduce((a,b) => a+b)/numbers.length,
       median = numbers.sort((a,b) => a-b)[Math.floor(numbers.length/2)];
   return mean == median ? 'same' : mean > median ? 'mean' : 'median'}
+
+  //////////////////////////////////////////////////////////////////////
+
+  const meanVsMedian = numbers =>
+    (val => val > 0 ? `mean` : val ? `median` : `same`)
+    (numbers.reduce((pre, val) => pre + val) / numbers.length - numbers.sort((a, b) => a - b)[numbers.length / 2 | 0]);
