@@ -45,3 +45,8 @@ const sortTransform = a => {
   
   return `${str1}-${str2}-${str3}-${str2}`
 }
+//////////////////////////////////////////////////////////////////
+
+const sortTransform = arr =>
+  (val => `${val(arr)}-${val(arr.sort((a, b) => a - b))}-${val(arr.reverse())}-${val(arr.reverse())}`)
+  (val => [...val.slice(0, 2), ...val.slice(-2)].map(val => String.fromCharCode(val)).join(``));
