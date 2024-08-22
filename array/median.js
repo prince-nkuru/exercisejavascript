@@ -7,3 +7,8 @@ Your goal is to implement the method meanVsMedian which accepts an odd-length ar
 Reminder: Median
 
 Array will always be valid (odd-length >= 3)*/
+
+meanVsMedian=numbers=>{
+  var mean = numbers.reduce((a,b) => a+b)/numbers.length,
+      median = numbers.sort((a,b) => a-b)[Math.floor(numbers.length/2)];
+  return mean == median ? 'same' : mean > median ? 'mean' : 'median'}
