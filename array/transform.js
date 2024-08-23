@@ -17,3 +17,12 @@ Examples
 [111, 112, 113, 114, 115, 113, 114, 110]  -->  "oprn-nors-sron-nors"
 [66, 101, 55, 111, 113]                   -->  "Beoq-7Boq-qoB7-7Boq"
 [99, 98, 97, 96, 81, 82, 82]              -->  "cbRR-QRbc-cbRQ-QRbc"*/
+
+function sortTransform(a){
+  let first = transform(a);
+  let second = transform(a.sort((a,b) => a - b));
+  let third = transform(a.sort((a,b) => b - a));
+  return `${first}-${second}-${third}-${second}`;
+}
+
+let transform = (arr) => [...arr.slice(0,2), ...arr.slice(arr.length - 2)].map(a => String.fromCharCode(a)).join('');
