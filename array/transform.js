@@ -35,3 +35,13 @@ const sortTransform = (arr) => {
   
   return [letter(arr), letter(choose), letter( [ ...choose ].reverse() ), letter(choose) ].join('-')
 }
+///////////////////////////////////////////////////////////////////////
+
+const getItems = a => a.slice(0, 2).concat(a.slice(-2))
+const sortTransform = a => {
+  const str1 = String.fromCharCode(...getItems(a))
+  const str2 = String.fromCharCode(...getItems(a.sort((a, b) => a - b)))
+  const str3 = String.fromCharCode(...getItems(a.sort((a, b) => b - a)))
+  
+  return `${str1}-${str2}-${str3}-${str2}`
+}
