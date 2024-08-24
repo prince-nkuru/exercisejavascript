@@ -32,3 +32,8 @@ input  : n = 5 , L0 = 0 , L1 = 0 , add = 0
 output : [ 0, 0, 0, 0, 0 ]
 Note
 n will always be greater than or equal to 2*/
+
+L = (n , L0 , L1 , add) =>
+  n === 2 
+  ? [ L0, L1 ] 
+  : [ L0 ].concat(L(n - 1, L1, L0 + L1 + add, add))
