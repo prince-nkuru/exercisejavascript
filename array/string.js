@@ -19,3 +19,6 @@ function switcher(x)
       
     }).join('');
 }
+/////////////////////////////////////////////////////////////////////////////////
+
+const switcher=x=>x.reduce((a,b)=>a+" ?!abcdefghijklmnopqrstuvwxyz"[29-b],"")
